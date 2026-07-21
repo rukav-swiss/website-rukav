@@ -15,13 +15,19 @@
 
   <div class="flex-ns flex-wrap justify-around">
     {{ range .pages }}
+      {{ $page := . }}
       <div class="w-100 w-30-l mb4 relative bg-white">
         <article class="bb b--black-10">
           <div class="db pv4 ph3 ph0-l no-underline dark-gray">
             {{ $img := partials.Include "func/GetFeaturedImage.html" . }}
             {{ with $img }}
-              <a href="{{ $.RelPermalink }}" class="db grow">
-                <img src="{{ . }}" class="img" alt="{{ $.Title }}" loading="lazy" decoding="async">
+              {{/* $ inside this `with` is the partial's own dict argument
+                   (title/pages/...), not the page - it has no RelPermalink,
+                   so this link fell back to an empty href and just reloaded
+                   the current (listing) page. $page, captured above, is the
+                   actual event. */}}
+              <a href="{{ $page.RelPermalink }}" class="db grow">
+                <img src="{{ . }}" class="img" alt="{{ $page.Title }}" loading="lazy" decoding="async">
               </a>
             {{ end }}
 

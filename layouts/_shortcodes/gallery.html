@@ -1,0 +1,18 @@
+{{- /*
+  Wraps a block of markdown images in a small, wrapping thumbnail row instead
+  of the default one-full-width-image-per-line layout. Use for a set of
+  related images - e.g. book covers for a reading club session.
+
+  Must use the << delimiter (not %%): with %%, this template's own <div>
+  output is spliced back into the markdown and re-passed through goldmark
+  with the rest of the page, which silently strips it as unsafe raw HTML
+  (renderer.unsafe is off). << inserts the template's output directly instead,
+  so .Inner is rendered explicitly here via markdownify - which still runs the
+  image render hook - rather than relying on automatic markdown pre-rendering.
+
+    {{< gallery >}}
+    ![Alt text](images/foo.jpg)
+    ![Alt text](images/bar.jpg)
+    {{< /gallery >}}
+*/ -}}
+<div class="poster-gallery">{{ .Inner | markdownify }}</div>

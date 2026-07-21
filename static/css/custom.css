@@ -231,6 +231,37 @@ footer .ananke-social-link .icon svg {
   height: 20px;
 }
 
+/* --- {{< gallery >}} shortcode --------------------------------------------
+   The image render hook adds no class or size cap to content images, so a run
+   of them (e.g. book covers) rendered at their near-full intrinsic width,
+   forcing one per line. Capping width here and neutralising the <p> that
+   goldmark wraps each image in lets them wrap into a row instead - this holds
+   regardless of whether the markdown source puts each image on its own line
+   or separates them with blank lines. */
+.poster-gallery {
+  display: block;
+  margin: 1rem 0;
+}
+
+.poster-gallery p {
+  display: inline;
+}
+
+.poster-gallery img {
+  display: inline-block;
+  width: 110px;
+  max-width: 40vw;
+  height: auto;
+  margin: 0 0.5rem 0.5rem 0;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 30em) {
+  .poster-gallery img {
+    width: 140px;
+  }
+}
+
 /* The theme's page header uses pv6 (8rem top and bottom). On a phone that is
    ~256px of empty band above the content on every page. */
 @media screen and (max-width: 59.99em) {

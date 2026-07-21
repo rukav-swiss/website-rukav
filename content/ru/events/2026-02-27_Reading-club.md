@@ -23,9 +23,11 @@ title: "Читательский клуб"
 
 27.02.2026 - Фёдор Достоевский "Бедные люди"
 
+{{< gallery >}}
 ![Poster for Summa Technologiae](images/book-club_2026-06_Summa-Technologiae.jpg)
 ![Poster for Chevengur](images/book-club_Chevengur.jpg)
 ![Poster for Mother-night](images/book-club_Mother-night.jpg)
 ![Poster for Steppenwolf](images/book-club_Steppenwolf.jpg)
+{{< /gallery >}}
 
 
