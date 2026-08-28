@@ -1,0 +1,36 @@
+# Production overlay. On the VPS:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+services:
+  caddy:
+    ports: !override
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes: !override
+      - ./deploy/Caddyfile.prod:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+  hugo:
+    environment:
+      TZ: Europe/Zurich
+      HUGO_ENVIRONMENT: production
+    command:
+      - hugo
+      - server
+      - --bind=0.0.0.0
+      - --port=1313
+      - --appendPort=false
+      - --baseURL=https://rukav-swiss.ch/
+      - --environment=production
+      - --minify
+      - --disableLiveReload
+      - --disableFastRender
+      - --watch
+      - --force_polling
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

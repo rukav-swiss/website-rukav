@@ -16,3 +16,17 @@ updates:
       separator: /
     labels:
       - type:dependencies
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+      day: friday
+      time: "18:00"
+      timezone: Europe/Zurich
+    target-branch: main
+    open-pull-requests-limit: 5
+    pull-request-branch-name:
+      separator: /
+    labels:
+      - type:dependencies

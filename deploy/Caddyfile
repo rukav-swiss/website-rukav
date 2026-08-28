@@ -1,0 +1,19 @@
+{
+	admin off
+}
+
+:80 {
+	encode zstd gzip
+
+	header {
+		-Server
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+	}
+
+	# CSP stays in the HTML meta tag: JSON-LD is authorized by a per-page
+	# hash, which a single Caddy header cannot express.
+	reverse_proxy hugo:1313
+}

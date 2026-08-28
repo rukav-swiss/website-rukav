@@ -1,10 +1,10 @@
 {{/*
   Content Security Policy.
 
-  GitHub Pages cannot set HTTP response headers, so the policy is delivered as a
-  meta tag. Note that frame-ancestors, report-uri and sandbox are IGNORED when a
-  CSP arrives via <meta> — clickjacking protection therefore still requires a
-  proxy (e.g. Cloudflare) in front of Pages that can set real headers.
+  Delivered as a meta tag because JSON-LD is authorized by a per-page SHA-256
+  hash, which a single Caddy header cannot express. Do not also set CSP on
+  Caddy: the browser enforces both and the header would block the hashed script.
+  frame-ancestors is ignored on meta CSP; Caddy sets X-Frame-Options instead.
 
   Directives below reflect what the site actually loads:
     - Site behavior is served from a fingerprinted same-origin script.

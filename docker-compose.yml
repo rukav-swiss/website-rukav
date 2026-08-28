@@ -1,0 +1,28 @@
+services:
+  caddy:
+    image: caddy:2-alpine@sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648
+    ports:
+      - "8080:80"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      hugo:
+        condition: service_healthy
+
+  hugo:
+    build: .
+    restart: on-failure
+    volumes:
+      - .:/src
+    environment:
+      TZ: Europe/Zurich
+    command:
+      - hugo
+      - server
+      - --bind=0.0.0.0
+      - --port=1313
+      - --appendPort=false
+      - --baseURL=http://localhost:8080/
+      - --disableFastRender
+      - --watch
+      - --force_polling

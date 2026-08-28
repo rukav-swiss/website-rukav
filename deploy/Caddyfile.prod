@@ -1,0 +1,25 @@
+{
+	email contact.cause143@simplelogin.com
+	admin off
+}
+
+www.rukav-swiss.ch {
+	redir https://rukav-swiss.ch{uri} permanent
+}
+
+rukav-swiss.ch {
+	encode zstd gzip
+
+	header {
+		-Server
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+	}
+
+	# CSP stays in the HTML meta tag: JSON-LD is authorized by a per-page
+	# hash, which a single Caddy header cannot express.
+	reverse_proxy hugo:1313
+}
