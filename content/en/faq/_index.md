@@ -84,7 +84,7 @@ External auditor: Dmitry U.
 
 ## Documents {#documents}
 
-Statutes from 19.07.2025
+Statutes from 19.07.2025 ([direct download link](https://drive.proton.me/urls/7YCS56MNQW#8hSC8uXp7fT4))
 
 {{< pdf "2025-07-19_Final_RuKAV_Verein_Statuten_07_2025-without-signatures.pdf" >}}
 

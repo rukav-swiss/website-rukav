@@ -85,7 +85,7 @@ aliases:
 
 ## Документы {#documents}
 
-Статуты от 19.07.2025
+Статуты от 19.07.2025 ([прямая ссылка для скачивания](https://drive.proton.me/urls/4BT7THHD2R#ncOxvZqdCGNs))
 
 {{< pdf "2025-07-19_Translation_to_Russian_of_Final_RuKAV_Verein_Statuten_07_2025-without-signatures.pdf" >}}
 
