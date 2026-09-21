@@ -47,6 +47,8 @@ The next title is chosen by a vote in our [Telegram voting bot](https://github.c
 {{< /club-column >}}
 {{< club-column title="Philosophical club" >}}
 
+13.11.2026 - Luc Ferry "A Brief History of Thought: A Philosophical Guide to Living"
+
 16.10.2026 - Irvin Yalom "Staring at the Sun: Overcoming the Terror of Death"
 
 18.09.2026 - Lars Svendsen "A Philosophy of Boredom"
