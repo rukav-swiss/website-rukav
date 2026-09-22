@@ -602,15 +602,12 @@ footer .ananke-social-link .icon svg {
 
 .event-meta dt {
   display: inline;
+  margin-right: 0.6em;
   font-family: Helvetica, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.event-meta dt::after {
-  content: ": ";
 }
 
 .event-meta dd {

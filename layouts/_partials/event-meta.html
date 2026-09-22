@@ -20,18 +20,18 @@
 <dl class="event-meta f6 mv3">
 	{{- if $hasSchedule -}}
 	<div>
-		<dt>{{ lang.Translate "eventWhen" }}</dt>
+		<dt>{{ lang.Translate "eventWhen" }}:</dt>
 		<dd>{{ .Params.schedule }}</dd>
 	</div>
 	{{- else if $hasDate -}}
 	<div>
-		<dt>{{ lang.Translate "eventDate" }}</dt>
+		<dt>{{ lang.Translate "eventDate" }}:</dt>
 		<dd><time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format $dateFormat .Date }}</time></dd>
 	</div>
 	{{- end -}}
 	{{- with $location -}}
 	<div>
-		<dt>{{ lang.Translate "eventWhere" }}</dt>
+		<dt>{{ lang.Translate "eventWhere" }}:</dt>
 		<dd>{{ . }}</dd>
 	</div>
 	{{- end -}}
