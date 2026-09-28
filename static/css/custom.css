@@ -399,7 +399,10 @@ header.cover.site-hero .tc-l.pv4 {
   align-items: flex-start;
 }
 
-.home-events .w-40-ns img.img {
+/* Thumbnails declare width and height. Tachyons only caps max-width, so in a
+   column narrower than that width the height attribute stays fixed and the
+   photo is stretched tall. Home cards were covered; the events listing was not. */
+img.img {
   width: 100%;
   height: auto;
   display: block;
