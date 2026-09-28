@@ -361,3 +361,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/go,hugo,node,linux,macos,windows,phpstorm+all,visualstudiocode
+
+# Cursor IDE
+.cursor/
