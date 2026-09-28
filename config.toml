@@ -127,7 +127,7 @@ home_events_limit = 6
 goatcounter = "rukav"
 
 [params.ananke]
-custom_css = ["custom.css.html"]
+custom_css = ["custom.css"]
 
 # Social links in the header, rendered as SVG icons by the theme's
 # social/follow.html partial. The URLs are built from the profile templates in
