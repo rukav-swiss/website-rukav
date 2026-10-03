@@ -26,6 +26,8 @@ Dates and titles are listed below. Check the calendar for the time and place of 
 
 The next title is chosen by a vote in our [Telegram voting bot](https://github.com/antmaxi/book-club-bot).
 
+18.12.2026 - Honoré de Balzac "The Wild Ass's Skin"
+
 27.11.2026 - Vladimir Sorokin "Day of the Oprichnik" and "The Sugar Kremlin"
 
 30.10.2026 - Johann Wolfgang von Goethe "Faust"
